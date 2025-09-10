@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe — Beautiful & Functional</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Decorative gradient background + floating orbs -->
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <main class="container" role="main" aria-labelledby="title">
+    <h1 id="title" class="title">Tic-Tac-Toe ✦</h1>
+
+    <div class="top-row">
+      <div class="status-bar status-active" id="status" aria-live="polite">
+        <span id="turn">Player X's turn</span>
+      </div>
+
+      <div class="scoreboard" aria-label="Scoreboard">
+        <div class="score" aria-hidden="false">
+          <div class="score-label">X</div>
+          <div id="scoreX" class="score-value">0</div>
+        </div>
+        <div class="score" aria-hidden="false">
+          <div class="score-label">O</div>
+          <div id="scoreO" class="score-value">0</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="board" id="board" role="grid" aria-label="Tic Tac Toe board">
+      <!-- 9 cells (buttons for accessibility) -->
+      <button class="cell" data-index="0" aria-label="Cell 1" role="gridcell"></button>
+      <button class="cell" data-index="1" aria-label="Cell 2" role="gridcell"></button>
+      <button class="cell" data-index="2" aria-label="Cell 3" role="gridcell"></button>
+      <button class="cell" data-index="3" aria-label="Cell 4" role="gridcell"></button>
+      <button class="cell" data-index="4" aria-label="Cell 5" role="gridcell"></button>
+      <button class="cell" data-index="5" aria-label="Cell 6" role="gridcell"></button>
+      <button class="cell" data-index="6" aria-label="Cell 7" role="gridcell"></button>
+      <button class="cell" data-index="7" aria-label="Cell 8" role="gridcell"></button>
+      <button class="cell" data-index="8" aria-label="Cell 9" role="gridcell"></button>
+    </section>
+
+    <div class="controls">
+      <button id="resetBtn" class="btn">Reset & Clear Scores</button>
+      <button id="restartSame" class="btn secondary">Restart Round</button>
+      <button id="muteBtn" class="btn subtle" aria-pressed="false">🔊 Sound On</button>
+    </div>
+
+
+  </main>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
